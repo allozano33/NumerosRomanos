@@ -14,25 +14,19 @@ public class NumerosRomanos {
         int[] valorDecimal = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
 
         String[] valorRomano = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
-        String res = null;
-        int i=0;
-        while(numero >=0 ) {
-            if (numero >= valorDecimal[i]) {
-                res = valorRomano[i];
-                numero -= valorDecimal(i);
-                else{
-                    i++;
+        String res = "";
+                    int i = 0;
+        while (numero > 0) {
+                        if (numero >= valorDecimal[i]) {
+                            res += valorRomano[i];
+                            numero -= valorDecimal[i];
+                        } else {
+                            i++;
+                        }
+                    }
+                    return res;
                 }
             }
-
-            return res;
-        }
-
-
-
-
-
-
 
 
 
